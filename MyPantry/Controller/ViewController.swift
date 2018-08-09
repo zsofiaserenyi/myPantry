@@ -83,6 +83,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             detailViewController.shortDescription = shortDescription
             detailViewController.image = recipeImage
             detailViewController.recipeText = recipeText
+            
+            
+            detailViewController.indexPath1 = indexPath
+            let currentTableView = self.tableView
+            detailViewController.tableView1 = currentTableView
         }
     }
     
