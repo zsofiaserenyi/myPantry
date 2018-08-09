@@ -15,9 +15,6 @@ class EditRecipeController: UIViewController, UIImagePickerControllerDelegate, U
     var recipeText: String!
     var image: UIImage!
     
-    var indexPath2: IndexPath!
-    var tableView2: UITableView!
-    
     var imagePicker: UIImagePickerController!
     
     //Outlets
@@ -31,9 +28,6 @@ class EditRecipeController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        DataService.instance.loadedRecipes.remove(at: indexPath2.row)
-        tableView2.deleteRows(at: [indexPath2], with: .fade)
         
         recipeImage.layer.cornerRadius = 10
         imagePicker = UIImagePickerController()
@@ -56,6 +50,8 @@ class EditRecipeController: UIViewController, UIImagePickerControllerDelegate, U
     
     
     @IBAction func saveChanges(_ sender: Any) {
+        NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "saveChanges"), object: nil))
+        
         if let name = recipeNameLabel.text, let shortDescription = shortDescriptionLabel.text, let recipeText = recipeTextLabel.text, let image = recipeImage.image {
             let imagePath = DataService.instance.saveImageAndCreatePath(image: image)
             let recipe = Recipe(imagePath: imagePath, name: name, shortDescription: shortDescription, recipeText: recipeText)
