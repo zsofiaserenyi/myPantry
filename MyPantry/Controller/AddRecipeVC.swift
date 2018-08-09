@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
     var imagePicker: UIImagePickerController!
     
@@ -17,7 +17,8 @@ class AddRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavigati
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var shortDescriptionField: UITextField!
-    @IBOutlet weak var recipeField: UITextField!
+    @IBOutlet weak var recipeField: UITextView!
+    @IBOutlet weak var addPicButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +27,17 @@ class AddRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavigati
         recipeImage.layer.cornerRadius = 10
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        
+        recipeField.delegate = self
+        recipeField.text = "Type in your recipe..."
+        recipeField.textColor = UIColor.lightGray
 
     }
     
     //Actions
 
     @IBAction func addPicButtonPressed(_ sender: UIButton) {
-        sender.setTitle("", for: .normal)
+        //sender.setTitle("", for: .normal)
         present(imagePicker, animated: true, completion: nil)
         
     }
@@ -56,6 +61,9 @@ class AddRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavigati
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         imagePicker.dismiss(animated: true, completion: nil)
         recipeImage.image = selectedImage
+        if recipeImage.image != nil {
+            addPicButton.setTitle("", for: .normal)
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -63,9 +71,22 @@ class AddRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavigati
         hideKeyboard()
         return true
     }
-
-
-
+    
+        // UITextField Placeholder
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if recipeField.text == "Type in your recipe..." {
+            recipeField.text = ""
+            recipeField.textColor = UIColor.lightGray
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if recipeField.text == "" {
+            recipeField.text = "Type in your recipe... :)"
+            recipeField.textColor = UIColor.lightGray
+        }
+    }
 }
 
 extension UIViewController {

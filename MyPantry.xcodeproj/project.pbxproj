@@ -10,6 +10,8 @@
 		3D0F6A842119CDFA008DAB22 /* AddRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F6A832119CDFA008DAB22 /* AddRecipeVC.swift */; };
 		3D0F6A872119DBF0008DAB22 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F6A862119DBF0008DAB22 /* DataService.swift */; };
 		3D4BEDAC2119C16A00333FE6 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4BEDAB2119C16A00333FE6 /* RecipeCell.swift */; };
+		3DC6D51F211AF1F900257CF7 /* RecipeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6D51E211AF1F900257CF7 /* RecipeDetailController.swift */; };
+		3DC6D521211AF67900257CF7 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6D520211AF67900257CF7 /* RecipeDetail.swift */; };
 		3DFC3C2E2119B4D800E16775 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC3C2D2119B4D800E16775 /* AppDelegate.swift */; };
 		3DFC3C302119B4D800E16775 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC3C2F2119B4D800E16775 /* ViewController.swift */; };
 		3DFC3C332119B4D800E16775 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFC3C312119B4D800E16775 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 		3D0F6A832119CDFA008DAB22 /* AddRecipeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeVC.swift; sourceTree = "<group>"; };
 		3D0F6A862119DBF0008DAB22 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		3D4BEDAB2119C16A00333FE6 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		3DC6D51E211AF1F900257CF7 /* RecipeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailController.swift; sourceTree = "<group>"; };
+		3DC6D520211AF67900257CF7 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		3DFC3C2A2119B4D800E16775 /* MyPantry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPantry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFC3C2D2119B4D800E16775 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DFC3C2F2119B4D800E16775 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +50,9 @@
 		3D0F6A822119CDBB008DAB22 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3DFC3C2F2119B4D800E16775 /* ViewController.swift */,
 				3D0F6A832119CDFA008DAB22 /* AddRecipeVC.swift */,
+				3DC6D51E211AF1F900257CF7 /* RecipeDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -91,7 +97,6 @@
 				3D4BEDAA2119C14A00333FE6 /* View */,
 				3DFC3C3F2119B54600E16775 /* Model */,
 				3DFC3C2D2119B4D800E16775 /* AppDelegate.swift */,
-				3DFC3C2F2119B4D800E16775 /* ViewController.swift */,
 				3DFC3C312119B4D800E16775 /* Main.storyboard */,
 				3DFC3C342119B4DA00E16775 /* Assets.xcassets */,
 				3DFC3C362119B4DA00E16775 /* LaunchScreen.storyboard */,
@@ -103,6 +108,7 @@
 		3DFC3C3F2119B54600E16775 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3DC6D520211AF67900257CF7 /* RecipeDetail.swift */,
 				3DFC3C402119B56500E16775 /* Recipe.swift */,
 			);
 			path = Model;
@@ -179,7 +185,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC6D521211AF67900257CF7 /* RecipeDetail.swift in Sources */,
 				3DFC3C412119B56500E16775 /* Recipe.swift in Sources */,
+				3DC6D51F211AF1F900257CF7 /* RecipeDetailController.swift in Sources */,
 				3DFC3C302119B4D800E16775 /* ViewController.swift in Sources */,
 				3DFC3C2E2119B4D800E16775 /* AppDelegate.swift in Sources */,
 				3D0F6A872119DBF0008DAB22 /* DataService.swift in Sources */,
