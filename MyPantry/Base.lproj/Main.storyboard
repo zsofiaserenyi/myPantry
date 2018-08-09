@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -166,13 +167,21 @@
                                         </state>
                                         <connections>
                                             <action selector="backButtonPressed:" destination="Srw-mg-wsA" eventType="touchUpInside" id="JZ9-da-QhM"/>
-                                            <action selector="backButtonPressed:" destination="5i3-Fk-8Ix" eventType="touchUpInside" id="vbH-E6-PQs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MW-g7-XyB">
+                                        <rect key="frame" x="338" y="30" width="29" height="29"/>
+                                        <state key="normal" backgroundImage="edit"/>
+                                        <connections>
+                                            <segue destination="ZdF-Fr-eYX" kind="show" identifier="editRecipe" id="OzT-zB-iGw"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.82352941180000006" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="2MW-g7-XyB" firstAttribute="top" secondItem="4TI-5Z-czF" secondAttribute="top" constant="30" id="3jl-zh-090"/>
                                     <constraint firstItem="PA0-7X-7hC" firstAttribute="leading" secondItem="4TI-5Z-czF" secondAttribute="leading" constant="15" id="6JE-af-FQB"/>
+                                    <constraint firstAttribute="trailing" secondItem="2MW-g7-XyB" secondAttribute="trailing" constant="8" id="7vJ-bc-OyW"/>
                                     <constraint firstItem="0JI-Fh-mmg" firstAttribute="top" secondItem="4TI-5Z-czF" secondAttribute="top" constant="30" id="R4b-8w-yj2"/>
                                     <constraint firstItem="0JI-Fh-mmg" firstAttribute="centerX" secondItem="4TI-5Z-czF" secondAttribute="centerX" id="bdQ-dR-Duq"/>
                                     <constraint firstItem="PA0-7X-7hC" firstAttribute="top" secondItem="4TI-5Z-czF" secondAttribute="top" constant="30" id="hnG-HS-dbT"/>
@@ -238,6 +247,133 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="742.5787106446777"/>
         </scene>
+        <!--Edit Recipe Controller-->
+        <scene sceneID="KiE-PI-LIq">
+            <objects>
+                <viewController id="ZdF-Fr-eYX" customClass="EditRecipeController" customModule="MyPantry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kLj-Q1-TCH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kjy-2e-DwR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Recipe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koU-C8-jNi">
+                                        <rect key="frame" x="107.5" y="30" width="160.5" height="27"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Utl-DX-Oiv">
+                                        <rect key="frame" x="15" y="30" width="60" height="35"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <state key="normal" title="&lt; Back">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="ZdF-Fr-eYX" eventType="touchUpInside" id="yXz-jy-mTL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.82352941180000006" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="koU-C8-jNi" firstAttribute="centerX" secondItem="Kjy-2e-DwR" secondAttribute="centerX" id="73z-va-Pyk"/>
+                                    <constraint firstItem="Utl-DX-Oiv" firstAttribute="leading" secondItem="Kjy-2e-DwR" secondAttribute="leading" constant="15" id="8EY-su-Wpy"/>
+                                    <constraint firstItem="koU-C8-jNi" firstAttribute="top" secondItem="Kjy-2e-DwR" secondAttribute="top" constant="30" id="B8h-2H-Mi6"/>
+                                    <constraint firstItem="Utl-DX-Oiv" firstAttribute="top" secondItem="Kjy-2e-DwR" secondAttribute="top" constant="30" id="cRe-9X-gf7"/>
+                                    <constraint firstAttribute="height" constant="80" id="oTh-Sm-hWM"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipe Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kcn-pN-kEl">
+                                <rect key="frame" x="20" y="295" width="335" height="30"/>
+                                <color key="textColor" red="0.57647058819999997" green="0.54901960780000003" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Short Description" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="m9z-qc-WO1">
+                                <rect key="frame" x="20" y="335" width="335" height="30"/>
+                                <color key="textColor" red="0.57647058819999997" green="0.54901960780000003" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Recipe Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LcH-FA-MEz">
+                                <rect key="frame" x="20" y="375" width="335" height="226"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.57647058819999997" green="0.54901960780000003" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXE-Mc-Ewo">
+                                <rect key="frame" x="97.5" y="616" width="180" height="36"/>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.82352941180000006" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="o72-hx-ChK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Sava changes">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveChanges:" destination="ZdF-Fr-eYX" eventType="touchUpInside" id="kbB-h5-Uxv"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FMJ-MI-exj">
+                                <rect key="frame" x="97.5" y="105" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FMJ-MI-exj" secondAttribute="height" multiplier="1:1" id="8gE-1H-Vhx"/>
+                                    <constraint firstAttribute="width" constant="180" id="fte-QN-CdT"/>
+                                    <constraint firstAttribute="height" constant="180" id="xdB-xQ-VTs"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCK-41-Nn4">
+                                <rect key="frame" x="97.5" y="105" width="180" height="180"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="Change">
+                                    <color key="titleColor" red="0.25882352939999997" green="0.82352941180000006" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changePicture:" destination="ZdF-Fr-eYX" eventType="touchUpInside" id="lhh-8Z-qyI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kjy-2e-DwR" firstAttribute="top" secondItem="kLj-Q1-TCH" secondAttribute="top" id="7EL-6a-ogh"/>
+                            <constraint firstItem="OXE-Mc-Ewo" firstAttribute="top" secondItem="LcH-FA-MEz" secondAttribute="bottom" constant="15" id="7x0-N1-FtB"/>
+                            <constraint firstItem="m9z-qc-WO1" firstAttribute="centerX" secondItem="kLj-Q1-TCH" secondAttribute="centerX" id="C5s-4P-7iP"/>
+                            <constraint firstItem="LcH-FA-MEz" firstAttribute="centerX" secondItem="kLj-Q1-TCH" secondAttribute="centerX" id="DMk-pA-zxI"/>
+                            <constraint firstItem="m9z-qc-WO1" firstAttribute="leading" secondItem="iFK-Oh-kaO" secondAttribute="leading" constant="20" id="Du7-RC-aoD"/>
+                            <constraint firstItem="m9z-qc-WO1" firstAttribute="top" secondItem="kcn-pN-kEl" secondAttribute="bottom" constant="10" id="FIj-g7-HRM"/>
+                            <constraint firstItem="LcH-FA-MEz" firstAttribute="top" secondItem="m9z-qc-WO1" secondAttribute="bottom" constant="10" id="H1n-sh-aVz"/>
+                            <constraint firstItem="LcH-FA-MEz" firstAttribute="leading" secondItem="iFK-Oh-kaO" secondAttribute="leading" constant="20" id="HF5-AD-HPO"/>
+                            <constraint firstItem="iFK-Oh-kaO" firstAttribute="bottom" secondItem="OXE-Mc-Ewo" secondAttribute="bottom" constant="15" id="K8s-3P-uvt"/>
+                            <constraint firstItem="kCK-41-Nn4" firstAttribute="height" secondItem="FMJ-MI-exj" secondAttribute="height" id="Kfg-h1-ak6"/>
+                            <constraint firstItem="FMJ-MI-exj" firstAttribute="top" secondItem="Kjy-2e-DwR" secondAttribute="bottom" constant="25" id="Oom-cv-Xix"/>
+                            <constraint firstItem="iFK-Oh-kaO" firstAttribute="trailing" secondItem="LcH-FA-MEz" secondAttribute="trailing" constant="20" id="PgA-He-Bex"/>
+                            <constraint firstItem="kCK-41-Nn4" firstAttribute="width" secondItem="FMJ-MI-exj" secondAttribute="width" id="WZK-Qr-Aci"/>
+                            <constraint firstItem="Kjy-2e-DwR" firstAttribute="trailing" secondItem="iFK-Oh-kaO" secondAttribute="trailing" id="XQV-TN-5mh"/>
+                            <constraint firstItem="kcn-pN-kEl" firstAttribute="top" secondItem="FMJ-MI-exj" secondAttribute="bottom" constant="10" id="dOX-nc-2yP"/>
+                            <constraint firstItem="kCK-41-Nn4" firstAttribute="centerY" secondItem="FMJ-MI-exj" secondAttribute="centerY" id="iJM-Wk-5HH"/>
+                            <constraint firstItem="kCK-41-Nn4" firstAttribute="centerX" secondItem="FMJ-MI-exj" secondAttribute="centerX" id="pXC-dF-9Or"/>
+                            <constraint firstItem="Kjy-2e-DwR" firstAttribute="leading" secondItem="iFK-Oh-kaO" secondAttribute="leading" id="sG6-yE-slO"/>
+                            <constraint firstItem="FMJ-MI-exj" firstAttribute="centerX" secondItem="kLj-Q1-TCH" secondAttribute="centerX" id="v11-Mr-MfZ"/>
+                            <constraint firstItem="OXE-Mc-Ewo" firstAttribute="centerX" secondItem="kLj-Q1-TCH" secondAttribute="centerX" id="xEM-nW-DdM"/>
+                            <constraint firstItem="kcn-pN-kEl" firstAttribute="leading" secondItem="iFK-Oh-kaO" secondAttribute="leading" constant="20" id="xjQ-my-FFK"/>
+                            <constraint firstItem="kcn-pN-kEl" firstAttribute="centerX" secondItem="kLj-Q1-TCH" secondAttribute="centerX" id="y9H-EZ-GXa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iFK-Oh-kaO"/>
+                    </view>
+                    <connections>
+                        <outlet property="recipeImage" destination="FMJ-MI-exj" id="rE5-g3-aZn"/>
+                        <outlet property="recipeNameLabel" destination="kcn-pN-kEl" id="hAf-dY-SgU"/>
+                        <outlet property="recipeTextLabel" destination="LcH-FA-MEz" id="srq-au-rlI"/>
+                        <outlet property="shortDescriptionLabel" destination="m9z-qc-WO1" id="YfZ-Qq-BtE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WWc-qU-8aZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="743"/>
+        </scene>
         <!--Add RecipeVC-->
         <scene sceneID="zXv-a4-bDh">
             <objects>
@@ -294,14 +430,14 @@
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Zv-6V-Jyl">
                                 <rect key="frame" x="20" y="303" width="335" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.57647058819999997" green="0.54901960780000003" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter short description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wpU-lE-8PC">
                                 <rect key="frame" x="20" y="343" width="335" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.57647058819999997" green="0.54901960780000003" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Un-2q-Owa">
@@ -367,6 +503,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="edit" width="29" height="29"/>
         <image name="sample" width="1500" height="1125"/>
     </resources>
 </document>
