@@ -14,9 +14,6 @@ class RecipeDetailController: UIViewController {
     var shortDescription: String!
     var image: UIImage!
     var recipeText: String!
-
-    var indexPath1: IndexPath!
-    var tableView1: UITableView!
     
     //Outlets
     
@@ -54,11 +51,6 @@ class RecipeDetailController: UIViewController {
             editRecipeController.shortDescription = shortDescription
             editRecipeController.recipeText = recipeText
             editRecipeController.image = image
-            
-            let indexPath2 = indexPath1
-            editRecipeController.indexPath2 = indexPath2
-            let tableView2 = tableView1
-            editRecipeController.tableView2 = tableView2
         }
     }
     

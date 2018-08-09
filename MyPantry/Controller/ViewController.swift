@@ -24,13 +24,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
         DataService.instance.loadRecipes()
         
+        
+        // Reload data on main view
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.onRecipesLoaded(_:)), name: NSNotification.Name(rawValue: "recipesLoaded"), object: nil)
         
-        // Want to clear main page
-        /*DataService.instance.loadedRecipes.remove(at: 0)
-        let indexPath = IndexPath(item: 0, section: 0)
-        tableView.deleteRows(at: [indexPath], with: .fade)
-        */
+        //Reload changed recipe
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.changedRecipeLoaded(_:)), name: NSNotification.Name(rawValue: "saveChanges"), object: nil)
     }
     
     //TableView methods
@@ -61,6 +60,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.reloadData()
     }
     
+    @objc func changedRecipeLoaded(_ notif: AnyObject) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        DataService.instance.loadedRecipes.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+    
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             DataService.instance.loadedRecipes.remove(at: indexPath.row)
@@ -83,11 +89,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             detailViewController.shortDescription = shortDescription
             detailViewController.image = recipeImage
             detailViewController.recipeText = recipeText
-            
-            
-            detailViewController.indexPath1 = indexPath
-            let currentTableView = self.tableView
-            detailViewController.tableView1 = currentTableView
         }
     }
     
