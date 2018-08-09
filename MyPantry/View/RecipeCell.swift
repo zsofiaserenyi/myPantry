@@ -15,6 +15,8 @@ class RecipeCell: UITableViewCell {
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var shortDescriptionLabel: UILabel!
+    @IBOutlet weak var recipeTextLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +27,7 @@ class RecipeCell: UITableViewCell {
         nameLabel.text = recipe.name
         shortDescriptionLabel.text = recipe.shortDescription
         recipeImage.image = DataService.instance.imageForPath(path: recipe.imagePath)
+        recipeTextLabel.text = recipe.recipeText
     }
 
 
