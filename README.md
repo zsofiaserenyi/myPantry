@@ -4,7 +4,7 @@
 
 ### Summary 
 
-If you have ever **wanted to save** your friends recipe who made a delicious apple pie 🥧 or you just **figured out how to make the perfect creme brulee** 👩🏻‍🍳 and would like to save the secret of it you just find the perfect application. 🥘
+If you have ever **wanted to save** your friends recipe who made a delicious apple pie 🥧 or you just **figured out how to make the perfect creme brulee** 👩🏻‍🍳 and would like to save the secret of it? You just find the perfect application! 🥘
 
 Nowadays the internet is full with millions of recipes but sometimes you just have to **customize it for your own taste**. You do not have to write it down on a piece of paper (which you will probably lose right away), print it out or even save it as a note on your phone. You just add it to MyPantry and it will be saved as long as you want. You can still modify it anytime you want. 👏🏻
 
