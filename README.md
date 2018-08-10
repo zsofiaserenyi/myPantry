@@ -70,7 +70,7 @@ Nowadays the internet is full with millions of recipes but sometimes you just ha
 
 ![](Images/Look2.png)
 
-*Here you can find the full recipe*
+*Here you can find the full recipe.*
 
 ![](Images/Look3.png)
 
