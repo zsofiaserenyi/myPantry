@@ -61,3 +61,19 @@ Nowadays the internet is full with millions of recipes but sometimes you just ha
 - Change anything you want and click save change button. 
 
 - There you go. You have your well-researched recipe with a perfectly fit photo.
+
+*This is how it looks like when you first open it.*
+
+![](Images/Look1.png)
+
+*Here can you add an other recipe to your collection.*
+
+![](Images/Look2.png)
+
+*Here you can find the full recipe*
+
+![](Images/Look3.png)
+
+*Here can you modify it.*
+
+![](Images/Look4.png)
