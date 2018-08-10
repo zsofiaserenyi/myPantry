@@ -30,7 +30,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tpp-K5-kdX">
-                                        <rect key="frame" x="330" y="30" width="30" height="48"/>
+                                        <rect key="frame" x="330" y="25" width="30" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="+">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,7 +45,7 @@
                                     <constraint firstAttribute="height" constant="80" id="1G3-w2-Fpp"/>
                                     <constraint firstItem="E8U-2i-CoX" firstAttribute="centerX" secondItem="hv4-1l-GBW" secondAttribute="centerX" id="F6b-18-Exn"/>
                                     <constraint firstItem="E8U-2i-CoX" firstAttribute="top" secondItem="hv4-1l-GBW" secondAttribute="top" constant="30" id="FkZ-uw-MBF"/>
-                                    <constraint firstItem="Tpp-K5-kdX" firstAttribute="top" secondItem="hv4-1l-GBW" secondAttribute="top" constant="30" id="Z9z-9K-SDg"/>
+                                    <constraint firstItem="Tpp-K5-kdX" firstAttribute="top" secondItem="hv4-1l-GBW" secondAttribute="top" constant="25" id="Z9z-9K-SDg"/>
                                     <constraint firstAttribute="trailing" secondItem="Tpp-K5-kdX" secondAttribute="trailing" constant="15" id="tU1-jp-kfa"/>
                                 </constraints>
                             </view>
@@ -61,14 +61,14 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LjM-BF-Lgm">
-                                <rect key="frame" x="20" y="90" width="335" height="567"/>
+                                <rect key="frame" x="0.0" y="90" width="375" height="567"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="100" id="L2o-In-wYi" customClass="RecipeCell" customModule="MyPantry" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L2o-In-wYi" id="Gfo-tJ-Jql">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="n6x-dk-oYz">
@@ -126,8 +126,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LjM-BF-Lgm" secondAttribute="bottom" constant="10" id="5eo-8x-cdc"/>
                             <constraint firstItem="Pp2-18-wbS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="BXi-Qt-FRZ"/>
                             <constraint firstItem="LjM-BF-Lgm" firstAttribute="top" secondItem="hv4-1l-GBW" secondAttribute="bottom" constant="10" id="HpZ-Tv-hFf"/>
-                            <constraint firstItem="LjM-BF-Lgm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JWn-6g-ruK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LjM-BF-Lgm" secondAttribute="trailing" constant="20" id="QlL-zl-DKA"/>
+                            <constraint firstItem="LjM-BF-Lgm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JWn-6g-ruK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LjM-BF-Lgm" secondAttribute="trailing" id="QlL-zl-DKA"/>
                             <constraint firstItem="hv4-1l-GBW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RcL-kE-r1Q"/>
                             <constraint firstItem="hv4-1l-GBW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WCE-Na-SSJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hv4-1l-GBW" secondAttribute="trailing" id="XC2-Cl-AiL"/>
@@ -170,7 +170,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MW-g7-XyB">
-                                        <rect key="frame" x="338" y="30" width="29" height="29"/>
+                                        <rect key="frame" x="331" y="30" width="29" height="29"/>
                                         <state key="normal" backgroundImage="edit"/>
                                         <connections>
                                             <segue destination="ZdF-Fr-eYX" kind="show" identifier="editRecipe" id="OzT-zB-iGw"/>
@@ -181,7 +181,7 @@
                                 <constraints>
                                     <constraint firstItem="2MW-g7-XyB" firstAttribute="top" secondItem="4TI-5Z-czF" secondAttribute="top" constant="30" id="3jl-zh-090"/>
                                     <constraint firstItem="PA0-7X-7hC" firstAttribute="leading" secondItem="4TI-5Z-czF" secondAttribute="leading" constant="15" id="6JE-af-FQB"/>
-                                    <constraint firstAttribute="trailing" secondItem="2MW-g7-XyB" secondAttribute="trailing" constant="8" id="7vJ-bc-OyW"/>
+                                    <constraint firstAttribute="trailing" secondItem="2MW-g7-XyB" secondAttribute="trailing" constant="15" id="7vJ-bc-OyW"/>
                                     <constraint firstItem="0JI-Fh-mmg" firstAttribute="top" secondItem="4TI-5Z-czF" secondAttribute="top" constant="30" id="R4b-8w-yj2"/>
                                     <constraint firstItem="0JI-Fh-mmg" firstAttribute="centerX" secondItem="4TI-5Z-czF" secondAttribute="centerX" id="bdQ-dR-Duq"/>
                                     <constraint firstItem="PA0-7X-7hC" firstAttribute="top" secondItem="4TI-5Z-czF" secondAttribute="top" constant="30" id="hnG-HS-dbT"/>
@@ -240,7 +240,7 @@
                         <outlet property="recipeImage" destination="lAP-is-CpD" id="mLz-EZ-Yev"/>
                         <outlet property="recipeNameLabel" destination="0JI-Fh-mmg" id="qaJ-AM-KQz"/>
                         <outlet property="recipeTextLabel" destination="8Hc-RS-SJ1" id="LOV-xH-MPq"/>
-                        <outlet property="shorDescriptionLabel" destination="19n-qW-Ptw" id="vBR-6I-QYh"/>
+                        <outlet property="shortDescriptionLabel" destination="19n-qW-Ptw" id="5ZS-Vf-bM8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6sn-W9-bkB" userLabel="First Responder" sceneMemberID="firstResponder"/>

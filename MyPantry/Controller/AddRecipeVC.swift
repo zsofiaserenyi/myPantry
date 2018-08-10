@@ -87,6 +87,11 @@ class AddRecipeVC: UIViewController, UIImagePickerControllerDelegate, UINavigati
             recipeField.textColor = UIColor.lightGray
         }
     }
+    
+    // Navigation Bar White Color
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 extension UIViewController {
