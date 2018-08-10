@@ -46,21 +46,21 @@ Nowadays the internet is full with millions of recipes but sometimes you just ha
 
 ### How does it work? 🧐
 
-- Open MyPantry application.
+1. Open MyPantry application.
 
-- A few of my favorite recipes are already provided but if you do not enjoy Pulled Pork sandwich or Strawberry Pie you can delete them by swiping left.
+2. A few of my favorite recipes are already provided but if you do not enjoy Pulled Pork sandwich or Strawberry Pie you can delete them by swiping left.
 
-- Click on the "+" button to add new recipe. 
+3. Click on the "+" button to add new recipe. 
 
-- Fill in the provided lines (name, short description, image and recipe text) and hit save recipe button. 
+4. Fill in the provided lines (name, short description, image and recipe text) and hit save recipe button. 
 
-- Check your full recipe by clicking on it.
+5. Check your full recipe by clicking on it.
 
-- You just figured out the perfect amount of sugar that should you put in your brownie? Never a problem! Hit the edit button.
+6. You just figured out the perfect amount of sugar that should you put in your brownie? Never a problem! Hit the edit button.
 
-- Change anything you want and click save change button. 
+7. Change anything you want and click save change button. 
 
-- There you go. You have your well-researched recipe with a perfectly fit photo.
+8. There you go! You have your well-researched recipe with a perfectly fit photo. 🎉
 
 *This is how it looks like when you first open it.*
 
