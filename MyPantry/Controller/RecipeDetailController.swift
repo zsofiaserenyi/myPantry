@@ -9,16 +9,13 @@
 import UIKit
 
 class RecipeDetailController: UIViewController {
-
-    var recipeName: String!
-    var shortDescription: String!
-    var image: UIImage!
-    var recipeText: String!
+    
+    var recipe: RecipeCell!
     
     //Outlets
     
     @IBOutlet weak var recipeNameLabel: UILabel!
-    @IBOutlet weak var shorDescriptionLabel: UILabel!
+    @IBOutlet weak var shortDescriptionLabel: UILabel!
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var recipeTextLabel: UILabel!
     
@@ -40,25 +37,23 @@ class RecipeDetailController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editRecipe" {
-            let recipeName = recipeNameLabel.text
-            let shortDescription = shorDescriptionLabel.text
-            let recipeText = recipeTextLabel.text
-            let image = recipeImage.image
+            let currentRecipe = recipe
             
             let editRecipeController = segue.destination as! EditRecipeController
-            
-            editRecipeController.recipeName = recipeName
-            editRecipeController.shortDescription = shortDescription
-            editRecipeController.recipeText = recipeText
-            editRecipeController.image = image
+            editRecipeController.recipe = currentRecipe
         }
     }
     
     func configureDetail() {
-        recipeNameLabel.text = recipeName
-        shorDescriptionLabel.text = shortDescription
-        recipeImage.image = image
-        recipeTextLabel.text = recipeText
+        recipeNameLabel.text = recipe.nameLabel.text
+        shortDescriptionLabel.text = recipe.shortDescriptionLabel.text
+        recipeImage.image = recipe.recipeImage.image
+        recipeTextLabel.text = recipe.recipeTextLabel.text
+    }
+    
+    // Navigation Bar White Color
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
 }

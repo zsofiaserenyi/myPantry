@@ -10,10 +10,7 @@ import UIKit
 
 class EditRecipeController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var recipeName: String!
-    var shortDescription: String!
-    var recipeText: String!
-    var image: UIImage!
+    var recipe: RecipeCell!
     
     var imagePicker: UIImagePickerController!
     
@@ -69,11 +66,15 @@ class EditRecipeController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func configureView() {
-        recipeNameLabel.text = recipeName
-        shortDescriptionLabel.text = shortDescription
-        recipeTextLabel.text = recipeText
-        recipeImage.image = image
+        recipeNameLabel.text = recipe.nameLabel.text
+        shortDescriptionLabel.text = recipe.shortDescriptionLabel.text
+        recipeTextLabel.text = recipe.recipeTextLabel.text
+        recipeImage.image = recipe.recipeImage.image
     }
     
+    // Navigation Bar White Color
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
 }

@@ -78,17 +78,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if segue.identifier == "showDetail" {
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
             let recipe = tableView(tableView, cellForRowAt: indexPath) as! RecipeCell
-            let recipeName = recipe.nameLabel.text
-            let shortDescription = recipe.shortDescriptionLabel.text
-            let recipeImage = recipe.recipeImage.image
-            let recipeText = recipe.recipeTextLabel.text
-            
+     
             let detailViewController = segue.destination as! RecipeDetailController
-            
-            detailViewController.recipeName = recipeName
-            detailViewController.shortDescription = shortDescription
-            detailViewController.image = recipeImage
-            detailViewController.recipeText = recipeText
+            detailViewController.recipe = recipe
         }
     }
     
