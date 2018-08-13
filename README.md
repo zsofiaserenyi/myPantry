@@ -58,7 +58,7 @@ Nowadays the internet is full with millions of recipes but sometimes you just ha
 
 6. You just figured out the perfect amount of sugar that should you put in your brownie? Never a problem! Hit the edit button.
 
-7. Change anything you want and click save change button. 
+7. Change anything you want and click save changes button. 
 
 8. There you go! You have your well-researched recipe with a perfectly fit photo. 🎉
 
